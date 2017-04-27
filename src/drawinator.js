@@ -7,12 +7,14 @@ ns.drawSomeStuff = () => {
 
   var paths = [];
 
-  paths[0] = 'M -100 -100 L 200 100 L 170 200 L 100 100 z';
-  paths[1] = 'M -100 -100 L 200 100 L 40 200 L 100 100 z';
+  paths[0] = 'M -100 -100 L 200 100 L 170 200 z';
+  paths[1] = 'M -50 -100 L 200 175 L 170 200 z';
+  paths[2] = 'M -100 -100 L 200 100 L 170 200 L 100 100 z';
+  paths[3] = 'M -100 -100 L 200 100 L 40 200 L 100 100 z';
 
   paths.forEach((p) => {
     var paf = new fabric.Path(p);
-    paf.set({ left: 120, top: 120, fill: getRandomColor() });
+    paf.set({ left: (window.innerWidth * 0.5), top: 120, fill: getRandomColor() });
     canvas.add(paf)
   });
 
